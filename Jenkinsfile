@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh 'echo "hello"'
+                git 'https://github.com/qmiinh/nodejs-todolist'
             }
         }
     }
