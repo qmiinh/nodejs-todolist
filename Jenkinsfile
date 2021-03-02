@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                git 'https://github.com/qmiinh/nodejs-todolist'
-            }
+            git branch: 'main', url: 'https://github.com/qmiinh/nodejs-todolist.git'
+		}
         }
     }
 }
