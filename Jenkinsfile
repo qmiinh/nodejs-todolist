@@ -9,7 +9,6 @@ pipeline {
        stage('build') {
             steps {
             sh 'docker ps'
-            sh label: '', script: 'docker build -t nodejs .'
 		}
         } 
     }
