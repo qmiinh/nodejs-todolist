@@ -10,9 +10,9 @@ pipeline {
             steps {
             sh 'ls -lrt'
             sh 'pwd'
-            sh 'docker build -t nodejs .'
+            sh 'docker build -t nodejs-haha .'
             sh 'docker ps && docker images'
-            sh 'docker push nodejs'
+            sh 'docker push nodejs-haha'
 		}
         } 
     }
