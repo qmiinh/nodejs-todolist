@@ -1,5 +1,4 @@
 pipeline {
-    agent any
     stages {
         stage('test') {
             steps {
@@ -8,6 +7,7 @@ pipeline {
         }
        stage('build') {
             steps {
+            which 'docker'
             sh 'ls -lrt'
             sh 'docker build -t nodejs .'
 		}
