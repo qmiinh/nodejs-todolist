@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('test') {
             steps {
-            git branch: 'main', url: 'https://github.com/qmiinh/nodejs-todolist.git'
+            git 'https://github.com/handuy/nodejs-todolist.git'
 		}
         }
        stage('build') {
             steps {
-            sh 'docker ps'
+            sh 'docker build -t nodejs .'
 		}
         } 
     }
