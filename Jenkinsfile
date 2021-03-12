@@ -10,7 +10,6 @@ pipeline {
             steps {
             sh 'ls -lrt'
             sh 'pwd'
-            sh 'ip add'
             sh 'docker build -t nodejs .'
 		}
         } 
