@@ -8,13 +8,14 @@ pipeline {
         }
        stage('build') {
             steps {
-            sh 'ls -lrt'
-            sh 'pwd'
-            sh 'docker login registry.gitlab.com'
             sh 'docker build -t registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs .'
-            sh 'docker ps && docker images'
-            sh 'docker push registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs'
 		}
-        } 
+       }
+        stage('run') {
+            steps {
+            sh 'docker run -p 80:80 registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs .'
+		}
+        }
+
     }
 }
