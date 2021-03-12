@@ -6,5 +6,10 @@ pipeline {
             git branch: 'main', url: 'https://github.com/qmiinh/nodejs-todolist.git'
 		}
         }
+       stage('build') {
+            steps {
+            script: 'docker build -t nodejs.todolist .'
+		}
+        } 
     }
 }
