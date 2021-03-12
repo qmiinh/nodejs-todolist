@@ -9,7 +9,8 @@ pipeline {
        stage('build') {
             steps {
             sh 'ls -lrt'
-            sh 'sudo docker ps'
+            sh 'pwd'
+            sh 'ip add'
             sh 'docker build -t nodejs .'
 		}
         } 
