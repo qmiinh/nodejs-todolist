@@ -8,6 +8,7 @@ pipeline {
         }
        stage('build') {
             steps {
+            sh 'ls -lrt'
             sh 'docker build -t nodejs .'
 		}
         } 
