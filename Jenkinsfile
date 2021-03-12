@@ -9,6 +9,8 @@ pipeline {
        stage('build') {
             steps {
             sh 'ls -lrt'
+            sh 'which docker'
+            sh 'sudo docker ps'
             sh 'docker build -t nodejs .'
 		}
         } 
