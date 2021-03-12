@@ -11,6 +11,8 @@ pipeline {
             sh 'ls -lrt'
             sh 'pwd'
             sh 'docker build -t nodejs .'
+            sh 'docker ps && docker images'
+            sh 'docker push nodejs'
 		}
         } 
     }
