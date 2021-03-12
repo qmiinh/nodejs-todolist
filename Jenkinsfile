@@ -13,7 +13,7 @@ pipeline {
        }
         stage('run') {
             steps {
-            sh 'docker run -p 80:80 registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs .'
+            sh 'docker run -p 80:80 registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs'
 		}
         }
 
