@@ -14,7 +14,7 @@ pipeline {
     }
         post {
 	    success {
-	    emailext body: '', subject: '', to: 'ducminh96@gmail.com'
+	    emailext body: '${DEFAULT_CONTENT}', subject: '${DEFAULT_SUBJECT}', to: 'ducminh96@gmail.com'
 	    }
 	}
 }
