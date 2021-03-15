@@ -8,7 +8,7 @@ pipeline {
         }
        stage('build') {
             steps {
-            sh 'docker build -t registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs .'
+            sh 'docker build -t registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs:test .'
 		}
        }
         stage('run') {
