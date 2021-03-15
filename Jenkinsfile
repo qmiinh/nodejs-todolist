@@ -11,11 +11,6 @@ pipeline {
             sh 'docker build -t registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs:test .'
 		}
        }
-        stage('run') {
-            steps {
-            sh 'docker run -p 80:80 registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs'
-		}
-        }
     }
         post {
 	    success {
