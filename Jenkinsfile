@@ -16,6 +16,10 @@ pipeline {
             sh 'docker run -p 80:80 registry.gitlab.com/qminhh/demo-gitlab-ci-nodejs'
 		}
         }
-
     }
+        post {
+	    success {
+	    emailext body: '', subject: '', to: 'ducminh96@gmail.com'
+	    }
+	}
 }
